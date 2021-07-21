@@ -3,8 +3,8 @@ const nameContainer = document.querySelector(".js-name");
 function paintName(name) {
   nameContainer.innerHTML = "";
   const title = document.createElement("span");
-  title.className = "name__text";
-  title.innerHTML = `Hello ${name}`;
+  title.className = "name-text";
+  title.innerHTML = `💕 안녕 ${name} 💕` ;
   nameContainer.appendChild(title);
 }
 
@@ -19,9 +19,9 @@ function handleSubmit(event) {
 
 function paintInput() {
   const input = document.createElement("input");
-  input.placeholder = "Type your name here";
+  input.placeholder = "당신의 이름을 알려주세요";
   input.type = "text";
-  input.className = "name__input";
+  input.className = "name-input";
   const form = document.createElement("form");
   form.addEventListener("submit", handleSubmit);
   form.appendChild(input);

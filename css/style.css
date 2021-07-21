@@ -1,82 +1,200 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
-
-/*  center */
-.center {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+@font-face {
+    font-family: "CookieRun-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
-.center .name__input {
-  appearance: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 36px;
-  border-bottom: 3px solid rgba(255, 255, 255, 0.8);
-  margin-bottom: 20px;
-}
-.center .name__input::placeholder {
-  color: white;
-  opacity: 0.7;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "CookieRun-Regular";
 }
 
-.center .name__input:focus,
-.center .name__input:active {
-  outline: none;
+a {
+    text-decoration: none;
 }
 
-.center .name__text {
-  font-size: 36px;
-  margin-bottom: 20px;
+li {
+    list-style: none;
 }
 
-.center .name {
-  margin-bottom: 30px;
+body {
+    width: 960px;
+    margin: 0 auto;
+    background: #e6e6e6;
 }
 
-/* clock */
-.clock {
-  font-size: 10em;
+#page-wrapper {
+    background: white;    
+    height: 855px;
+    margin: 40px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
 }
 
-/*  location */
-.location {
-  opacity: 0.7;
-  transition: opacity 0.3s ease-in;
-  font-style: italic;
-  font-size: 12px;
-  position: absolute;
-  bottom: 25px;
-  left: 25px;
+
+/* header */
+#main-header {
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
 }
 
-.location:hover {
-  opacity: 1;
+.name-input {
+    font-size: 30px;
+    border: none;
+    width: 100%;
+    padding: 10px 10px;
+    text-align: center;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 0;
 }
 
-/*  main */
-body,
-html {
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: "Open Sans", sans-serif;
+.name-text{
+    padding: 10px;
+    font-size: 60px;
 }
 
-html {
-  background: #333333;
+.name-text {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2.5s; /* don't forget to set a duration! */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+.name-text:hover {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: fadeOut; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2.5s; /* don't forget to set a duration! */
+}
+
+.js-clock {
+    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2.5s; /* don't forget to set a duration! */
+}
+
+.js-clock:hover {
+    animation: fadeOut; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2.5s; /* don't forget to set a duration! */
+}
+
+.js-ampm {
+    font-size: 20px;
+}
+
+.js-time {
+    font-size: 60px;
+}
+
+/* nav */
+#main-navigation {
+    border-top: 1px solid #c8c8c8;
+    border-bottom: 1px solid #c8c8c8;
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+.outer-menu-item {
+    width: 184px;
+    float: left;
+    text-align: center;
+}
+.outer-menu-item:hover {
+    background: tomato;
+}
+
+.menu-title {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding: 5px 20px;
+    color: tomato;
+}
+
+.menu-title:hover {
+    background: tomato;
+    color: white;
+}
+
+/* content */
+
+img {
+    width: 420px;
+    float: left;
+    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2.5s; /* don't forget to set a duration! */
+}
+
+img:hover {
+    animation: fadeOut; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2.5s; /* don't forget to set a duration! */
+}
+
+.body_column {
+    margin-left: 20px;
+    width: 460px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    position: relative;
+    left: 20px;
+    bottom: 22px;
+}
+
+.toDoList input,
+.toDoList li {
+  width: 360px;
+}
+
+.checked input,
+.checked li {
+  width: 360px;
+}
+
+.toDoForm {
+  margin-top: 20px;
+}
+
+.toDoForm input::placeholder {
+  font-size: 20px;
+}
+
+.todo_column {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.js-toDoWrite {
+    border: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+    transition: border-color 0.5s ease-in-out;
+    width: 380px;
+}
+.js-toDoWrite::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.js-toDoWrite:focus {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.js-toDoList {
+  margin: 20px;
+  padding-inline-start: 0px;
 }
 
 @keyframes fadeIn {
@@ -88,66 +206,124 @@ h6 {
   }
 }
 
-body {
-  background-size: cover;
-  background-position: center center;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-  animation-delay: 0.5s;
-  color: white;
+.js-toDoList > ul ,
+.checked > ul {
+    font-size: 20px;
+}
+.js-toDoList > li ,
+.checked > li{
+  list-style: none;
   display: flex;
+  position: relative;
   align-items: center;
-  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px 16px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  color: black;
+  font-size: 20px;
+  animation: fadeIn 0.5s ease-in;
 }
 
-input {
-  background: none;
-  appearance: none;
-  border: 0;
-  font-size: 22px;
-  color: white;
-  border-bottom: 2px solid white;
+.js-toDoList > li > span,
+.checked > li > span{
+    margin-left: 10px;
 }
 
-input::placeholder {
-  color: white;
+.js-toDoWrite li span {
+  margin-left: 10px;
+  font-size: 20px;
 }
 
-input:focus,
-input:active {
-  outline: none;
+
+.checked li {
+  opacity: 0.7;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.checked .fa-check-square {
+  color: tomato;
 }
 
-ul {
-  margin-top: 50px;
+
+#delBtn {
+  border: none;
+  position: absolute;
+  text-decoration: none;
+  right: 20px;
 }
 
-/* to-do */
-.list {
-  margin-bottom: 20px;
+#strikeout {
+  height: 2px;
+  width: 79%;
+  background-color: tomato;
+  position: absolute;
+  left: 38px;
 }
 
-.toDo {
-  font-size: 22px;
-}
-
-.toDo__button {
-  margin-right: 10px;
+.fa-square,
+.fa-check-square,
+#delBtn,
+.clear span:hover {
   cursor: pointer;
 }
 
-/* weather */
-.weather {
-  position: absolute;
-  font-style: italic;
-  font-size: 12px;
-  position: absolute;
-  top: 25px;
-  right: 25px;
+.toDoList,
+.checked {
+  margin: 10px;
 }
+
+.list-title {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 15px;
+  margin: 15px 0px 0px 0px;
+}
+
+.clear {
+  display: flex;
+  width: 80%;
+  justify-content: flex-end;
+  font-size: 15px;
+}
+
+.clear span:hover {
+  cursor: ;
+}
+
+/* article */
+article {
+    padding: 5px 10px 10px 10px;
+}
+.article-header {
+    padding: 20px 0;
+}
+.article-title {
+    font-size: 25px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.article-date {
+    font-size: 13px;
+}
+.article-body {
+    font-size: 14px;
+}
+
+/* footer */
+.js-weather {
+    float: left;
+    border-top: 1px solid #c8c8c8;
+    text-align: left;
+    right: 25px;
+    bottom: 10px;
+}
+.quote {
+    border-top: 1px solid #c8c8c8;
+    text-align: right;
+    left: 25px;
+    right: 25px;
+    bottom: 10px;
+}
+
+

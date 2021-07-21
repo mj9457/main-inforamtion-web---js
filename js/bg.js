@@ -1,28 +1,18 @@
-const images = [
-  "1.jpg",
-  "2.jpg",
-  "3.jpg",
-  "4.jpg",
-  "5.jpg",
-  "6.jpg",
-  "7.jpg",
-  "8.jpg",
-  "9.jpg",
-  "10.jpg",
-  "11.jpg",
-  "12.jpg",
-  "13.jpg",
-  "14.jpg",
-  "15.jpg",
-  "16.jpg",
-  "17.jpg",
-  "18.jpg",
-];
+const body = document.querySelector("#image");
+const IMG_NUMBER = 18;
 
-const chosenImage = images[Math.floor(Math.random() * images.length)];
+function paintImage(imgNumber) {
+  const image = new Image();
+  image.src = `image/${imgNumber}.jpg`;
+  body.prepend(image);
+}
 
-const bgImage = document.createElement("img");
+function getRandom() {
+  const number = Math.ceil(Math.random() * 18);
+  return number;
+}
 
-bgImage.src = `img/background/${chosenImage}`;
-
-document.body.appendChild(bgImage);
+function init() {
+  paintImage(getRandom());
+}
+init();

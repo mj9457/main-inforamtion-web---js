@@ -6,8 +6,8 @@ const quotes = [
   },
   {
     quote:
-      "행복을 두 손안에 꽉 잡고 있을 때는 그 행복이 항상 작아 보이지만, 그것을 풀어준 후에는 비로소 그 행복이 얼마나 크고 귀중했는지 알 수 있다",
-    author: "막심 고리끼",
+      "끝까지 해보기 전까지는 늘 불가능해 보입니다",
+    author: "넬슨 만델라",
   },
   {
     quote: "행복이란, 과잉과 부족의 중간에 있는 조그마한 역이다",
@@ -45,8 +45,8 @@ const quotes = [
   },
 ];
 
-const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
+const quote = document.querySelector(".quote span:first-child");
+const author = document.querySelector(".quote span:last-child");
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = todaysQuote.quote;
